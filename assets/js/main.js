@@ -167,7 +167,7 @@ $( document ).ready(function($) {
 
     const RSS_URL = `https://www.newsit.gr/tags/koronoios/feed/`;
 
-  fetch(RSS_URL)
+    fetch(RSS_URL)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
     .then(data => {
@@ -181,5 +181,8 @@ $( document ).ready(function($) {
         $('.feedrow').append(feedhtml);
       }
     })
+    .catch((error) => {
+      $('.feedrow').append('<h4 class="text-center"> Παρουσιάστηκε κάποιο πρόβλημα με την ανάκτηση των δεδομένων. Μας συγχωρείτε για την αναστάτωση</h4>')
+  })
 
 });
