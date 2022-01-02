@@ -1,138 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body{
-    font-family: 'Fira Sans', sans-serif;
+body {
+  font-family: "Fira Sans", sans-serif;
 }
-#hero{
-    background-image: url('../../assets/img/hero.jpg');
-    height:800px;
-    background-size: cover;
-}
-
-#hero h2{
-    font-size:70px;
+#hero {
+  background-image: url("../../assets/img/hero.jpg");
+  height: 800px;
+  background-size: cover;
 }
 
-#hero img{
-    max-width: 530px;
+#hero h2 {
+  font-size: 70px;
 }
 
-@media screen and (max-width:1480px){
-    #hero > div{
-        display:none;
-    }
+#hero img {
+  max-width: 530px;
 }
 
-#boxes{
-    position: absolute;
-    top: 780px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-   }
-
-.box-row{
-    background:#fff;
-    display:flex;
-    align-items: center;
-    border-radius:1px solid #fff;
-    border-radius:5px;
-    -webkit-box-shadow: 0px 5px 20px 0px #000000; 
-    box-shadow: 0px 5px 20px 0px #000000;   
+@media screen and (max-width: 1480px) {
+  #hero > div {
+    display: none;
+  }
 }
 
-.box-row img{
-    max-width: 85px;
+#boxes {
+  position: absolute;
+  top: 780px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#statistics{
-    background: linear-gradient(rgba(0, 52, 118, 0.7), rgba(0, 52, 118, 0.7)), url('../../assets/img/covidbg.jpg');
-    background-size: cover;
+.box-row {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 1px solid #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 20px 0px #000000;
+  box-shadow: 0px 5px 20px 0px #000000;
 }
 
-.statistics-title{
-    text-align:center;
-    color:#fff;
-    padding:60px;
+.box-row img {
+  max-width: 85px;
 }
 
-.statistics-card{
-    background:#fff;
-    max-height:350px;
-    text-align: center;
-    padding:20px;
-    border:1px solid transparent;
-    border-radius:6px;
-    box-shadow:0px 0px 5px 1px rgb(201,205,188);
-    display:flex;
+#statistics {
+  background: linear-gradient(rgba(0, 52, 118, 0.7), rgba(0, 52, 118, 0.7)),
+    url("../../assets/img/covidbg.jpg");
+  background-size: cover;
+}
+
+.statistics-title {
+  text-align: center;
+  color: #fff;
+  padding: 60px;
+}
+
+.statistics-card {
+  background: #fff;
+  max-height: 350px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px 1px rgb(201, 205, 188);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statistics-card p {
+  font-weight: bold;
+  font-size: 30px;
+  align-self: center;
+}
+
+.statistics-deaths {
+  color: #d63031;
+}
+
+.pmor,
+.prap,
+.ptotalp {
+  font-size: 18px !important;
+}
+
+.ages li {
+  font-weight: bold;
+}
+
+.vaccinations {
+  background: #84c77a;
+  color: #fff;
+}
+
+.row-stats {
+  gap: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  #statistics .row-stats {
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .statistics-card {
+    max-width: 100% !important;
+  }
 }
 
-.statistics-card p{
-    font-weight: bold;
-    font-size:30px;
-    align-self: center;
+@media screen and (max-width: 768px) {
+  .box-row {
+    display: none;
+  }
+
+  .row-stats {
+    padding: 0 1rem;
+  }
 }
 
-.statistics-deaths{
-    color:#d63031;
+#news-feed {
+  background: #cacaca;
 }
 
-.pmor,.prap,.ptotalp{
-    font-size:18px!important;
+#news-feed h4 {
+  color: #000 !important;
+  font-size: 20px;
 }
 
-.ages li{
-    font-weight: bold;
+#news-feed a:hover {
+  text-decoration: none;
 }
 
-.vaccinations{
-    background:#84c77a;
-    color:#fff;
+.newsitlogo {
+  max-width: 80px;
 }
 
-.row-stats{
-    gap:30px;
+#news-feed p {
+  font-weight: bold;
 }
 
-@media screen and (max-width:1200px){
-    #statistics .row-stats{
-        flex-direction: column;
-    }
-
-    .statistics-card{
-        max-width: 100%!important;
-    }
+.feedrow {
+  align-items: center;
+  justify-content: center;
 }
 
-#news-feed{
-    background:#cacaca;
+footer {
+  background: #000;
+  color: #fff;
 }
-
-#news-feed h4{
-    color:#000!important;
-    font-size:20px;
-}
-
-#news-feed a:hover{
-    text-decoration: none;
-}
-
-.newsitlogo{
-    max-width:80px;
-}
-
-#news-feed p{
-    font-weight:bold;
-}
-
-.feedrow{
-    align-items:center;
-    justify-content: center;
-}
-
-footer{
-    background:#000;
-    color:#fff
-}
-
