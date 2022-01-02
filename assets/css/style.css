@@ -110,7 +110,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .box-row {
-    display: none;
+    display: none!important;
   }
 
   .row-stats {
